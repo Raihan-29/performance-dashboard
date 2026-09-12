@@ -1,32 +1,55 @@
-# React + TypeScript + Vite
+# Performance Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A high-performance React and TypeScript data visualization dashboard designed to handle and visualize large datasets efficiently.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Performance Analytics Dashboard provides an interactive interface for analyzing large datasets through real-time statistics and visualizations.
 
-## React Compiler
+The dashboard supports large datasets and uses Web Worker-based data generation to maintain UI responsiveness.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Interactive dataset size selection
+- Supports datasets up to 500,000 records
+- Total value calculation
+- Average value calculation
+- Value-over-time line chart
+- Category distribution bar chart
+- Region distribution bar chart
+- Responsive dashboard interface
+- Web Worker-based data processing
+- Optimized React rendering using `useMemo`
+- Real-time dashboard updates
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Technologies Used
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- React
+- TypeScript
+- Vite
+- Recharts
+- Lucide React
+- Web Workers
+- CSS
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Project Structure
+
+```text
+performance-dashboard/
+├── public/
+├── src/
+│   ├── components/
+│   ├── data/
+│   │   └── generateData.ts
+│   ├── types/
+│   │   └── data.ts
+│   ├── utils/
+│   ├── workers/
+│   │   └── dataWorker.ts
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+├── index.html
+└── README.md
