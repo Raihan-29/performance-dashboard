@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 8px;
+  color: #667085;
+  font-size: 15px;
+}
+
+
+/* DATASET CONTROL */
+
+.dataset-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dataset-control label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dataset-control select {
+  padding: 10px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* STATISTICS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #eaecf0;
+  border-radius: 14px;
+
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef2ff;
+}
+
+.stat-card span {
+  display: block;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+.stat-card strong {
+  font-size: 22px;
+}
+
+
+/* CHART CONTAINER */
+
+.chart-container {
+  background: white;
+
+  border: 1px solid #eaecf0;
+
+  border-radius: 14px;
+
+  margin-top: 24px;
+
+  padding: 24px;
+
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.section-header p {
+  color: #667085;
+
+  margin-top: 6px;
+}
+
+
+/* CHART */
+
+.chart {
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+
+/* TWO COLUMN CHARTS */
+
+.charts-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px;
+}
+
+.small-chart {
+  min-width: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .app {
+    padding: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+}
